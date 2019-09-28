@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//定义函数,
+			//function 关键字
+			//fn 函数名
+			function fn(){
+				console.log("a");
+			}
+			
+			//调用函数
+			fn();
+			fn();
+			
+			//函数传参
+			//sum(2,8);  //计算2+8的结果。
+			//a,b叫做形参
+			function fn1(a,b){
+				console.log(a+b);
+				//return 返回值
+				return a+b;
+			}
+			//2,8叫做实参
+			//fn1(2,8);
+			console.log(fn1(2,8));
+			
+			//作用域
+//			function   addNum(n){
+//					 n += 5;//n=15 ，形参值发生变化不会影响实参
+//				}
+//			var  a=10;
+//			addNum(a);           
+           // alert(a);
+			
+			var a = 10;//全局变量
+		    function m1(){
+				var b = 5;//局部变量，
+			     //   alert(b);//5
+			    }
+		    m1();
+		   // console.log(b);b is not defined"
+		  //  alert(a); 
+		    
+		    //函数内部可以再包含其他函数 
+			  //函数之间允许相互调用，也允许向外调用, 
+			  //不可以调用同级函数的嵌套函数
+			  function a1(){
+				  	console.log("a");
+				  	function b1(){
+				  		console.log("b");
+				  	}
+				  	b1();
+			  }
+			 // a1();
+			  function c(){
+			  	console.log("c");
+			  	//b1();b1 is not defined"	
+			  }
+			c();
+			
+			//练习：向一个函数传入不定数量的数值求和。
+			var s = 0 ;
+			function fn2(){
+				//arguments 内置数组
+				//length 长度
+				console.log(arguments.length);
+				//通过下标访问数组元素，下标从0开始
+				console.log(arguments[6]);
+				for(var i=0;i<arguments.length;i++){
+					s+=arguments[i];
+				}
+				console.log(s);
+			}
+			fn2(1,5,6,4,8,9,9999,54,4,4,4,44,1,11,1,17,777);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

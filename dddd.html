@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//定义数组 
+			var arr = new Array();//空数组
+			
+			var arr = new Array(10);//定义一个长度为10的数组
+			
+			var arr = new Array("hello");//定义一个长度为1的数组，数组元素为hello,
+			
+			var arr = new Array(10,"word");//定义一个长度为2的数组，数组元素为10,word
+
+			console.log(arr.length);
+			
+			//2.字面量方式定义数组
+			var arr1 = [];//空数组
+			var arr1 = [1,"word",2];//定义一个长度为3的数组，数组元素为1,2,word
+			
+			//length 长度
+			console.log(arr1.length);
+			
+			//访问数组元素
+			console.log(arr1[0]);
+			var arr = [1,2,3,4,5,6,7,7,88,8,8,8,6,88,8,9999];
+			//访问数组最后一个元素
+			console.log(arr[arr.length-1]);
+			
+			//遍历数组元素
+//			for(var i=0;i<arr.length;i++){
+//				document.write(arr[i]+"<br />");
+//			}
+
+			//for in 快速遍历
+			for( var i in arr){
+				document.write(arr[i]+"<br />");
+			}
+			
+			console.log(arr);
+			arr[0] = 10 ;//改变数组元素
+			console.log(arr);
+			
+			//1、push()方法可以接收任意数量的参数，把它们逐个添加到数组的末尾，并返回修改后数组的长度。
+			var arr = ["张三","李四","王五","马六"];
+			//var arr1 = arr.push("猪八戒");
+			
+			//pop()方法则从数组末尾移除最后一个元素，减少数组的 length 值，然后返回移除的元素。
+			//var arr1 = arr.pop();
+			
+			//shift() 方法从数组前端移除一个元素,返回被移除的元素。
+			//var arr1 = arr.shift();
+			
+			//unshift() 方法从数组前端添加一个或多个元素，返回数组长度
+			//var arr1 = arr.unshift("小二");
+			
+			//slice():  不修改原数组, 将原数组中的指定区域数据
+			//var arr1 = arr.slice(1,3);//第一个参数指下标，第二个参数指长度
+			//var arr1 = arr.slice(1);//从下标1开始截取，一直到最后
+			
+			//插入: 如果有3个或以上参数,且第二个参数(长度)为0,则表示插入
+			//var arr1 = arr.splice(1,0,"猪八戒"); //猪八戒显示在下标1的位置
+			
+			//替换: 如果有3个或以上的参数, 且第二个参数(长度)不为0, 则表示替换
+			//var arr1 = arr.splice(1,2,"猪八戒");
+			
+			//删除: 如果只有两个参数, 则表示删除指定区域的数据
+			//var arr1 = arr.splice(1,2);
+			//var arr1 = arr.splice(1);
+			
+			//7、用数组的元素组成字符串 - box.join()
+			 var str = arr.join("+");
+			 console.log(str);
+			console.log(arr);
+			console.log(arr1);
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
